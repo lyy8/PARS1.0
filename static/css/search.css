@@ -1,0 +1,430 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color:#F2F2F2FF ;
+}
+
+#nav{
+    width: 100%;
+    height: 48px;
+    position:relative;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+ul.search_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #337486;
+  }
+
+  li.search_li{
+    float: left;
+
+  }
+  li.search_li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    height: 20px;
+    text-decoration: none;
+  }
+  
+  li.search_li a:hover:not(.people) {
+    color:white;
+    background-color:#64BEB4;
+  }
+
+/*
+  .people{
+    color:#F2E9D0;
+    background-color: #bb5a5a;
+  }
+*/
+ /* .people{
+    float: left;
+    margin-top: 10px;
+    background-color: #141613;
+  }
+*/
+/* 搜索框 */
+div.search{       
+    margin-top: 14px;    
+    float: left;
+}
+div.search input{
+    flex: 4;
+    height: 25px;
+    outline: none;
+    border: 1px solid #bb5a5a;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+div.search button{
+    flex: 1;
+    width: 42px;
+    height: 25px;
+    background-color: #bb5a5a;
+    color: white;
+    border-style: none;
+    outline: none;
+}
+div.search button i{
+    font-style: normal;
+}
+div.search button:hover{
+    color: #000;
+}
+
+
+/*导航栏以下*/
+#Secon-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+   /* background:url(../images/bg_search.jpg);*/
+}
+/*侧面导航*/
+#sideBar{
+    position: fixed;
+    width: 0;
+    height: 50%;
+    margin-left: 0.5px;
+    margin-top: 40px;
+    border-radius: 0px 10px 10px 0px;
+    border:2px solid #378
+
+}
+#sideBar:hover{
+    width: 12%;
+    height: auto;
+}
+
+#sideBar:hover #sidebar-title{
+    width: 18%;
+    display: inline;
+}
+
+#sideBar:hover .lable{
+    width: 18%;
+    display: inline;
+}
+
+#sideBar:hover .til{
+    width: 18%;
+    display: inline;
+}
+
+
+#sidebar-title{
+    width: 40px;
+    font-size: 20px;
+    font-weight: 6px;
+    border-bottom:5px solid #64BEB4 ;
+    color: #003944FF;
+    display: none;
+}
+
+.lableAres{
+    margin-top: 5px;
+    color:#F2E9D0;
+}
+.til{
+    margin-top: 2px;
+    margin-left: 2%;
+    font-weight: 5px;
+    color: #337486;
+    display: none;
+
+}
+.lable{
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 6%;
+    display: none;
+}
+.lable:link,.lable:visited{
+    color:#545454;  
+}
+
+.lable:hover,.lable:active{
+    font-weight: 5px;
+    color:#9ED6CD;  
+}
+
+
+/*中间内容*/
+#middle{
+    positive: relative;
+    width: 62.5%;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: white;*/
+}
+
+#searchArea{
+    width: 100%;
+  /*  background-color: white;*/
+}
+
+/*banner*/
+.banner
+{
+    width: 100%;
+    margin: 5px;
+    position: relative;
+    /*margin-left: 25%;*/
+}
+
+.banner.flip{
+    margin:0px;
+}
+
+/*搜索栏*/
+div.search{       
+    margin-top: 14px;    
+    display: flex;
+}
+#searchBar{
+    position: relative;
+    font-size: 0px;
+    margin-top: 30px;
+    /*background-color: #165115;*/
+}
+.select{
+     float: left;
+    width: 10%;
+    height: 50px;
+    color: #337486;
+    font-size: 15px;
+    padding-left: 2%;
+    margin-left: 8%;
+    border:2px solid #64BEB4 ;
+    border-radius: 5px 0px 0px 5px;
+}
+#searchBar input{
+   /* flex: 4;*/
+    float: left;
+    width: 60%;
+    height: 50px;
+    outline: none;
+    margin-left: 14%;
+    border: 2px solid #64BEB4;
+    box-sizing: border-box;
+    border-radius: 5px 0px 0px 5px;
+    /*padding-left: 10px;*/
+}
+#searchBar  button{
+   /* flex: 1;*/
+   float: left;
+   
+    width: 10%;
+    height: 50px;
+    background-color: #64BEB4;
+    color: white;
+    border-style: none;
+    outline: none;
+    border-radius: 0px 5px 5px 0px
+}
+#searchBar  button i{
+    font-style: normal;
+}
+#searchBar button:hover{
+    font-weight: bold;
+}
+.xian{
+    float: left;
+    width: 100%;
+    height: 1px;
+     margin-top: 50px;
+     margin-bottom: 20px;
+     background-color: #D7EAE7;
+     position: relative;
+}
+
+#anim_area{
+    /*position: relative;*/
+    width: 100%
+    margin: 0 auto;
+   
+}
+.fanju{
+    width: 80px;
+    font-size: 20px;
+    font-weight: 6px;
+    margin-top: 10px;
+    border-bottom:5px solid #64BEB4 ;
+    color: #003944FF;
+    visibility: hidden;
+}
+
+.animation{
+    float: left;
+    width: 30%;
+    height: 375px;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-top: 5px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: none;
+
+}
+
+/*.animation:hover .anim_text{
+     
+}*/
+.picture{
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
+a{
+    width: 100%;
+    text-decoration: none;
+    color: #565656;
+    padding-bottom: 10px;
+}
+
+a.ani
+{
+    background-color: #F4FAF9;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.anim_text{
+   padding-left: 5%;
+}
+
+.search_suggest{
+    position:relative; 
+    z-index:999; 
+    width:59%;
+    margin-top: 80px;
+    margin-left: 14%;
+    border: 2px solid #64BEB4;
+    /*-webkit-box-shadow: 0 1.5px 2px #00000080;*/
+    display:none;
+}
+
+.search_suggest li{
+    font-size: 15px;
+    height:24px; 
+    overflow:hidden; 
+    padding-left:3px; 
+    line-height:24px; 
+    background:#FFFFFF;
+    border-radius: 3px; 
+    cursor:default;
+}
+
+.search_suggest li.hover{
+    background:#8DC3BA;
+    font-size: 17px;
+    color: white;
+
+}
+
+
+
+
+#main{
+        width: 100%;
+        height: 325px;
+        position: relative;
+        margin: 50px auto;/*为了在此的观看效果，我选择了这个数据*/
+        overflow: hidden;/*因为设置了隐藏，所示的效果只有一张solid1*/
+        /*可在元素赠加和定位完成后进行影藏*/
+    }
+    /*
+     * 为所以图片设置同main一样宽高不大推荐
+        因为，如果图片没进行过处理，强制改变宽高，容易产生变形，
+        图片将变得难看。
+     * *//*为了使图片叠加所以我们使用absolute，在此之前
+     *  我们需要去它的父级添加一个relative。
+     * */
+    #main .banner-slide{
+        position: absolute;
+        width: 100%;
+        height: 350px; 
+        overflow: hidden;/*防止图片过大，超出范围，影响视觉*/
+        display:none;
+    }
+    #main .banner-slide img{
+        width: 100%;
+        height: auto;
+    }
+    #main .slide-active{
+        display: block;
+    }
+    /*
+     * 挨个设置轮播图的图片
+     * 为了方便在图片所在div加内容，标签
+     * 我们选择把轮播图内容以background形式出现。
+     */
+    #main .slide1{
+        background: red;
+    }
+    #main .slide2{
+        background: yellow;
+    }
+    #main .slide3{
+        background: blue;
+    }
+    #main .slide4{
+        background: green;
+    }
+    #main .slide5{
+        background: deepskyblue;
+    }
+    /*ul标签的移动*/
+    #main .dots #dots{
+        position: absolute;
+        margin-top: 300px;/*由于我设置了li高为40，总高600，所以进行
+        560的移动*/
+        margin-left: 75%;/*(1200-5*130)/2*/
+    }
+    #main .dots #dots li{
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        opacity: 0.5;
+        background: gray;/*在此的样式根据个人喜好自己添加*/
+        /*由于上面的定位，所以*/
+        float: left;/*为了是图标自左向右*/
+        margin-left: 30px;
+        list-style: none;
+    }
+    #main .dots #dots .li1{
+        background: #64BEB4;
+    }
+    #main #left-right .move{
+        position: absolute;
+        margin-top:140px;
+        height: 80px;
+        width: 40px;
+        font-size: 50px;/*设置<>大小*/
+        padding-left: 10px ;
+    }
+    /*左右分离*/
+    #main #left-right #next{
+        right:0;
+    }
+    /*触碰上下张有效果*/
+    #main #left-right .move:hover{
+        background: rgba(0,0,0,0.4);
+    }
+    

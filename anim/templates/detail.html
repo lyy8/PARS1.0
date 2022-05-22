@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+     <script  type= "text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script  type= "text/javascript" src="../js/detail.js"></script>
+</head>
+<body>
+    <div id="container" >
+        <div id="conform">发表成功~</div>
+        <div id="cover"></div>
+       <!-- 导航条 -->
+        <div id="nav" >
+           <ul class="search_ul">
+            <li class="search_li"><a href="index.html" class="people"><img width="50px" height="30px" src="../images/logo.png"/></a></li>
+            <li class="search_li"><a href="index.html" >首页</a></li>
+            <li class="search_li"><a href="recommendation.html">推荐</a></li>
+            <li class="search_li"><a href="community.html">社区</a></li>
+
+              <!--  <li class="search_li" style="float:right"><a href="#">注册</a><> -->
+               <li class="search_li" style="float:right"><a href="login.html">登录</a><li>
+               <li class="search_li" style="float:right"><a href="community.html" class="people"><img width="16px" height="16px" src="../icons/people.png"/></a><li>
+               <li class="search_li" style="float:right"><a href="search.html" class="people"><img width="16px" height="16px" src="../icons/查找.png"/></a><li>
+              <!--  <li class="search_li" style="float:right">
+                   <div class="search">
+                       <input type="text" placeholder="请输入..." name="" id="" value="" />
+                       <button>搜索<tton>
+                   </div>
+               <> -->
+             </ul>
+       </div>
+
+
+        <div class="detail">
+            <div class="detail_img" style="float: left;">
+                <img class="detail_img" src="../anim_images/时光代理人.jpg" >
+            </div>
+            <div class="detail_text" style="float: left;">
+                <span class="type" style="float: left;">国创</span>
+                <h2 style="float: left;">时光代理人</h2>
+                <span class="state" style="float: left;">已完结 &nbsp;&nbsp;共11话</span>
+                <div class="score" style="float: right;" >
+                    <p class="score">9.8分</p>
+                    <p class="score_num">10.8万人评分</p>
+                </div>
+
+                <div class="detail_content" style="clear: left;">
+                    <p class="synopsis">风格：原创/治愈/奇幻/悬疑<br/>
+                        地区：中国大陆<br/>
+                        开播时间：2021年4月30日<br/>
+                        声优：程小时：苏尚卿/陆光：杨天翔/乔苓：李诗萌<br/><br/>
+                        简介：在繁华都市的某个角落，有一家叫做“时光照相馆”的小店还在
+                        照常营业。虽然门庭冷落，但它背后其实由两个具有特殊能力的男人—
+                        —程小时和陆光经营着。为了完成顾客的委托，陆光和程小时组队配合
+                        使用超能力进入照片，然而事情的发展却没能按他们所想的那样……<br/><br/><br/>
+                    </p>
+                    
+                    <label for="source">播放源</label>
+                    <select>
+                        <option value="bilibili">bilibili</option>
+                        <option value="tencent">腾讯</option>
+                        <option value="iqiyi">爱奇艺</option>
+                        <option value="youku">优酷</option>
+                        <option value="none">无</option>
+                    </select>
+                    <a href="https://www.bilibili.com/bangumi/media/md28230742/" target="_blank">
+                    <button class="play">跳转至播放页面</button>
+                </a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+            
+        <!-- 评论区 -->
+        <div class="comment">
+            <div style="float: left;" class="comment_add" id="comment0"><img class="comment_add_img" src="../icons/add-circle.png">
+                <p class="comment_add_p"> 添加点评</p>
+           </div>
+            
+       <!--      
+            <label for="comment_method"></label>
+            <select style="float: right;" class="comment_method">
+                <option value="new">最新</option>
+                <option value="hot">最热</option>
+            </select>
+ -->
+            <div class="comment-large" id="comment" style="float: left;" >
+                <img class="touxiang_large"  style="float: left;" src="../touxiang_images/touxiang-1.jpg"/>
+                <div class="comment_content_large"  style="float: left;">
+                    <p class="comment_name_large">你好世界</p>
+                    <p class="comment_text">千呼万唤始出来，正片终于与大家见面啦！</p>
+                    <div class="comment_operate" style="float: left;">
+                        <p class="comment_operare_text" style="float: left;" >2021-10-16 14:22</p>
+                        <img class="comment_operare_img like" src="../icons/like.png" id="comment-like0"style="float: left;">
+                        <p class="comment_operare_text txt1"
+                        id="num0" style="float: left;">11</p>
+                        <img src="../icons/unlike.png" class="comment_operare_img unlike" style="float: left;">
+                    </div>
+                </div>
+            </div>
+
+        <!--     <div class="comment-small" style="float: left;" >
+                <img class="touxiang_smll" style="float: left;" src="../touxiang_images/touxiang-2.jpg"/>
+                <div class="comment_content_small" style="float: left;">
+                    <p class="comment_name_small" style="float: left;">你好世界</p>
+                    <p class="comment_text" style="float: left;">千呼万唤始出来，正片终于与大家见面啦！《时光代理人》每周五11:00准时更新，记得来看来
+                        看来看——我的我的我的千呼万唤始出来，正片终于与大家见面啦！《时光代理人》每周五11:00准时更新，记得来看来
+                        看来看——我的我的我的千呼万唤始出来，正片终于与大家见面啦！《时光代理人》每周五11:00准时更新，记得来看来
+                        看来看——我的我的我的</p>
+                    <div class="comment_operate" style="float: left;">
+                        <p class="comment_operare_text" style="float: left;" >2021-10-16 14:22</p>
+                        <img class="comment_operare_img" src="../icons/like.png" style="float: left;">
+                        <p class="comment_operare_text" style="float: left;">11.2万</p>
+                        <img src="../icons/unlike.png" class="comment_operare_img" style="float: left;">
+                        <p class="comment_operare_text" style="float: left;margin-left: 30px;">回复</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- 弹窗 -->
+        <div id="writeComment">
+            <div class="dialogClose">×</div>
+            <div id="wrap"> 
+                <div id="top">
+                <a href="https://www.bilibili.com/bangumi/media/md28230742/" class="img">
+                    <img src="../anim_images/时光代理人.png" alt="未查找到图片" id="pic">
+                </a>
+                <div id="info">
+                   <h4>时光代理人</h4>
+                   <p id="tip">请发表你对这部作品的评分</p>
+                   <div id="rate_wrap">
+                     <ul>
+                        <li>☆</li>
+                        <li>☆</li>
+                        <li>☆</li>
+                        <li>☆</li>
+                        <li>☆</li>
+                    </ul>
+                   </div>
+                </div>
+               </div>
+           </div>
+          
+            <div id="sendComment">
+                <textarea id="short-view" >
+                </textarea> 
+                <button id="send">发表短评</button>
+            </div>
+          
+        </div>
+</div>
+</body>
+</html>

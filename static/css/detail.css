@@ -1,0 +1,427 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#container{
+	width: 100%;
+	height: 100%;
+	float: left;
+	background-color:#F2F2F2FF ;
+}
+/* 导航栏 */
+#nav{
+    width: 100%;
+    height: 50px;
+    position:relative;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+ul.search_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #337486;
+  }
+
+  li.search_li{
+    float: left;
+
+  }
+  li.search_li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    height: 20px;
+    text-decoration: none;
+  }
+  
+  li.search_li a:hover:not(.people) {
+    color:white;
+    background-color:#64BEB4;
+  }
+
+/* 详情 */
+div.detail{
+  height: 27.5%;
+  width: 75%;
+  background-color: #ffffff;
+  margin-left: 12.5%;
+}
+div.detail_img{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+div.detail_img img{
+  width: 270px;
+  height: 360px;
+}
+/* 详情文字 */
+div.detail_text{
+  /* background-color: aqua; */
+  width: 67.5%;
+  height: 75%;
+  margin-top: 35px;
+  margin-left: 3%;
+}
+/* 类型 */
+span.type{
+  border: 1px #337486 solid;
+  border-radius: 5px;
+  width: 50px;
+  height: 25px;
+  text-align: center;
+}
+/* 标题 */
+div.detail_text h2{
+  margin-left: 20px;
+  margin-top: -5px;
+  color: #337486;
+}
+/* 完结 集数 */
+span.state{
+  font-size: 14px;
+  text-align:center;
+  margin-left: 15px;
+  margin-top: 8px;
+  color: #464646;
+}
+/* 评分 */
+div.score{
+  text-align: center;
+  margin-right: 30px;
+}
+p.score{
+  margin-top: -10px;
+  font-size: 26px;
+  color: #64BEB4;
+}
+p.score_num{
+  font-size: 14px;
+  color: #464646;
+}
+
+/* 风格 */
+p.synopsis{
+  margin-top: 50px;
+  line-height: 180%;
+}
+
+button.play{
+  background-color: #64BEB4;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+}
+
+button.play:active
+{
+  border:#337486 2px solid;
+  font-size: 13px;
+}
+
+/* 评论区 */
+/* 总体 */
+div.comment{
+  float: left;
+  background-color: rgb(255, 255, 255);
+  height: 350px;
+  width: 75%;
+
+  margin-left: 12.5%;
+}
+/* 添加评论icon */
+.comment_add
+{
+  cursor: pointer;
+}
+img.comment_add_img{
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}
+/* 添加评论 */
+p.comment_add_p {
+  float: left;
+  margin-top: 12px;
+  margin-left: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  color: #64BEB4;
+}
+a.comment_add_p :hover{
+  color: #9c2d2d;
+}
+
+/* 最新or最热 */
+select.comment_method{
+  margin-top:12px;
+  size:40px;
+  margin-right: 30px;
+}
+
+/* 第一条评论 */
+div.comment-large{
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+
+/* 大头像 */
+img.touxiang_large{
+  width: 60px;
+  height: 60px;
+  border-radius:30px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+/* 评论内容+名字 */
+div.comment_content_large{
+  margin-top: 30px;
+  margin-left: 15px;
+  width: 80%;
+}
+/* 评论区名字 */
+p.comment_name_large{
+  font-weight:bold;
+  color: #337486;
+  font-size: 18px;
+}
+
+/* 评论区内容 */
+p.comment_text{
+  margin-top: 6px;
+  width: 80%;
+}
+
+/* 点赞 时间 收藏 评论 */
+div.comment_operate{
+ padding-bottom: 10px;
+}
+/* 评论 */
+p.comment_operare_text{
+  margin-top: 3px;
+  font-size: 12px;
+  color: #464646;
+}
+/* 点赞 */
+img.comment_operare_img{
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+}
+
+/* 小评论 */
+div.comment-small{
+  width: 90%;
+  margin-left: 10%;
+}
+
+img.touxiang_smll{
+  width: 40px;
+  height: 40px;
+  border-radius:20px;
+}
+div.comment_content_small{
+  margin-left: 30px;
+  width: 80%;
+}
+p.comment_name_small{
+  margin-top: 5px;
+  font-size:16px;
+  font-weight: bold;
+  color: #337486;
+  margin-right: 10px;
+}
+div.clear{
+  clear:both;
+  height:0;width:0;
+  margin-bottom: 10px;
+}
+
+#cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color:#707070FF ;
+  opacity: 0.5;
+  z-index: 998;
+  display: none;
+}
+
+
+
+/*弹窗*/
+#writeComment
+{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 594px;
+    height: 360px;
+    background: #fff;
+    border-radius: 4px;
+    margin-left: -297px;
+    margin-top: -202px;
+    cursor: default;
+    z-index: 9999;
+    /*-webkit-animation: dialog-pulse .6s;*/
+    animation: dialog-pulse .6s;
+    display: none;
+}
+
+.dialogClose
+{
+  position: absolute;
+    top: 20px;
+    right: 22px;
+    width: 14px;
+    height: 14px;
+    font-size: 20px;
+    color: #C0C0C0FF;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#wrap{
+  padding: 30px 30px 20px;
+}
+
+#top{
+  width: 100%;
+}
+
+.img{
+    width: 100px;
+    height: 133px;
+    float: left;
+}
+
+#pic{
+      width: 85px;
+    height: 110px;
+    border-radius: 4px;
+    display: block;
+}
+
+#info
+{
+  padding-left: 80px;
+}
+
+#info h4{
+    line-height: 50px;
+    font-size: 20px;
+    color: #222;
+    letter-spacing: 0;
+    overflow: hidden;
+   /* -o-text-overflow: ellipsis;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#tip{
+  font-size: 14px;
+  color: #222;
+  margin-top: 10px;
+  letter-spacing: 0;
+}
+
+#rate_wrap
+{
+  position: relative;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+#rate_wrap ul{
+  list-style: none;
+}
+
+#rate_wrap ul li{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding-right: 6px;
+    color: #FF6A00FF;
+    cursor: pointer;
+}
+
+
+#sendComment
+{
+      position: relative;
+    width: 534px;
+    height: 130px;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+#sendComment textarea{
+    width: 510px;
+    height: 72px;
+    line-height: 24px;
+    display: block;
+    margin: 12px auto 0;
+    font-size: 14px;
+    color: #222;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    background-color: #FFFFFFFF;
+}
+
+#send{
+  position: absolute;
+    bottom: -60px;
+    left: 50%;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -60px;
+    text-align: center;
+    display: block;
+    background: #64BEB4;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+   /* -webkit-transition: all .3s;
+    -o-transition: all .3s;*/
+    transition: all .3
+}
+
+#send:active{
+  font-size: 15px;
+}
+
+#conform{
+    position: absolute;
+    width: 6%;
+    height: 34px;
+    z-index: 10000;
+    margin-top: 428px;
+    margin-left: 45%;
+    background-color: #65abb3a6;
+    padding-left: 1.5%;
+    padding-top: 12px;
+    border-radius: 5px;
+    color: #ffffff;
+    display: none;
+}

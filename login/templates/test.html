@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+    <script type="text/javascript" src="/static/js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1>test</h1>
+
+
+     <div id="date">
+            <ul class="date_ul">
+                {% for i in week %}
+                            <a href="javascript:;" class="a_date" day="{{ i.week }}"><li>{{ i.time }} <br/>{{ i.hanziweek }}</li></a>
+                 {% endfor %}
+                    </ul>
+        </div>
+
+        <!-- 时间轴 -->
+        <div id="anim">
+            <div class="timer left">
+                <div class="main hidden">
+                    <div class="content">
+                        <div class="item">
+                            {% for item in anim %}
+                                {% if item.week == "6" %}
+                                    <a href="detail.html" class="a_child"><div class="child">
+                                        <span class="anim_time">{{ item.time }}</span>
+                                        <h4>{{ item.name }}</h4>
+                                        <img src="{{ item.img }}"/>
+                                        <p>第{{ item.jishu }}话</p>
+                                    </div></a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="timer right">-->
+<!--                <div class="main hidden">-->
+<!--                    <div class="content">-->
+<!--                        <div class="item">-->
+<!--                            <a href="detail.html" class="a_child"><div class="child">-->
+<!--                                <span class="anim_time">14:30</span>-->
+<!--                                <h4>银仙</h4>-->
+<!--                                <img src="/static/anim_images/银仙.jpg"/>-->
+<!--                                <p>第12话</p>-->
+<!--                            </div></a>-->
+<!--                            <a href="detail.html" class="a_child"><div class="child">-->
+<!--                                <span class="anim_time">16:40</span>-->
+<!--                                <h4>元气少女缘结神</h4>-->
+<!--                                <img src="/static/anim_images/元气少女缘结神.jpg"/>-->
+<!--                                <p>第13话</p>-->
+<!--                            </div></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <script type="text/javascript">
+            //在页面加载完后立即执行多个函数。
+            jQuery(function($) {
+                alert("test")
+                dates[6].setAttribute("class","a_date a_data_active");
+            });
+
+            $('body').on('click','.a_date',function(){
+                $("#anim").hide();
+                var day = $(this).attr("day");
+                switchDate(day);
+                $("#anim").fadeIn("2000");
+            });
+
+            function init(){
+                var anim = {{ anim|safe }}
+            }
+
+            function switchDate(value){
+                var anims = [
+                    [["86-不存在的战区-2期","第12话","07:40"],["白沙的水族馆","第8话","08:30"],["工作细胞","第9话","12:40"]],
+                    [["海贼王女","第7话","06:20"],["哪吒","第7话","10:10"],["狐妖小红娘","第8话","13:50"]],
+                    [["滑头鬼之孙","第7话","06:20"],["极主夫道","第7话","10:10"],["借东西的小人阿莉埃蒂","第8话","13:50"]],
+                    [["两不疑","第7话","06:20"],["灵笼","第7话","10:10"],["一人之下","第8话","13:50"]],
+                    [["元气少女缘结神","第7话","06:20"],["天气之子","第1话","18:10"]],
+                    [["伍六七之玄武国篇","第7话","06:20"],["小林家的龙女仆","第7话","10:10"],["借东西的小人阿莉埃蒂","第8话","13:50"]],
+                    [["你的名字","第1话","06:20"],["天空之城","第1话","10:10"],["千与千寻","第1话","13:50"]],
+                ];
+                valueInt = parseInt(value);
+                // 得到日程表列表
+                var date_ul = document.getElementsByClassName("date_ul")[0];
+                var left_item = document.getElementsByClassName("timer left")[0].getElementsByClassName("item")[0];
+                var right_item = document.getElementsByClassName("timer right")[0].getElementsByClassName("item")[0];
+                // 日期的a数组
+                var dates = date_ul.getElementsByClassName("a_date");
+
+                // 更换active
+                for(var i=0;i<dates.length;i++){
+                    dates[i].setAttribute("class","a_date");
+                }
+                dates[valueInt-1].setAttribute("class","a_date a_data_active");
+                // 渲染div
+                // 第一步 清空所有的child a
+                $("a").remove(".a_child");
+                // 第二步 根据value重新渲染child
+                for(var i=0;i<anims[value-1].length;i++){
+
+                    name = anims[value-1][i][0];
+                    var num = anims[value-1][i][1];
+                    var time = anims[value-1][i][2];
+
+                    var div = document.createElement("div");
+                    var html = '<a href="detail.html" class="a_child"><div class="child">'+' <span class="anim_time">'+time+'</span>'+'<h4>'+name+'</h4>'+' <img src="/static/anim_images/'+name+'.png"/><p>'+num+'</p></div></a>';
+                    div.innerHTML = html;
+
+                    if(time<="12:00"){
+                        left_item.appendChild(div);
+                    }else{
+                        right_item.appendChild(div);
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

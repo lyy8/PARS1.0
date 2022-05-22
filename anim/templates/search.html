@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>搜索</title>
+	<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+    <script  type= "text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script  type= "text/javascript" src="../js/search.js"></script>
+     <script  type= "text/javascript" src="../js/recommendation.js"></script>
+</head>
+<body >
+	  <!-- 导航条 -->
+      <div id="nav" >
+        <ul class="search_ul">
+            <li class="search_li"><a href="index.html" class="active_nav" class="people"><img width="50px" height="30px" src="../images/logo.png"/></a></li>
+            <li class="search_li"><a href="index.html" >首页</a></li>
+            <li class="search_li"><a href="recommendation.html">推荐</a></li>
+            <li class="search_li"><a href="community.html">社区</a></li>
+
+            <li class="search_li" style="float:right"><a href="login.html">登录</a></li>
+            <li class="search_li" style="float:right"><a href="community.html" class="people"><img width="16px" height="16px" src="../icons/people.png"/></a></li>
+            <li class="search_li" style="float:right"><a href="search.html" class="people"><img width="16px" height="16px" src="../icons/查找.png"/></a></li>
+           <!--  <li class="search_li" style="float:right">
+                <div class="search">
+                    <input type="text" placeholder="请输入..." name="" id="" value="" />
+                    <button>搜索</button>
+                </div>
+            </li> -->
+          </ul>
+    </div>
+
+        <div id="Secon-container">
+            <!-- 左侧导航 -->
+            <div id="sideBar">
+                <p id="sidebar-title">筛选</p>
+            
+                <div class="lableAres">
+                    <p class="til">类型</p>
+                    <a href="#" class="lable all">全部</a>
+                     <a href="#" class="lable zhengpian">正片</a>
+                     <a href="#" class="lable movie">电影</a>
+                     <a href="#" class="lable">其他</a>
+                </div>
+                <div class="lableAres">
+                    <p class="til">地区</p>
+                     <a href="#" class="lable all">全部</a>
+                     <a href="#" class="lable china">中国</a>
+                     <a href="#" class="lable japanese">日本</a>
+                     <a href="#" class="lable American">美国</a>
+                     <a href="#" class="lable">其他</a>
+                    
+                </div>
+                <div class="lableAres">
+                    <p class="til">状态</p>
+                    <a href="#" class="lable  all">全部</a>
+                     <a href="#" class="lable">完结</a>
+                     <a href="#" class="lable">连载</a>
+                    
+                </div>
+                <div class="lableAres">
+                    <p class="til">版权</p>
+                    <a href="#" class="lable  all">全部</a>
+                     <a href="#" class="lable">b站</a>
+                     <a href="#" class="lable">爱奇艺</a>
+                     <a href="#" class="lable">腾讯</a>
+                     <a href="#" class="lable">优酷</a>
+                     <a href="#" class="lable">其他</a>
+                </div>
+                <div class="lableAres">
+                    <p class="til">季度</p>
+                     <a href="#" class="lable  all">全部</a>
+                     <a href="#" class="lable">1月</a>
+                     <a href="#" class="lable">4月</a>
+                     <a href="#" class="lable">7月</a>
+                     <a href="#" class="lable">10月</a>
+                </div>
+                <div class="lableAres">
+                    <p class="til">时间</p>
+                     <a href="#" class="lable all">全部</a>
+                     <a href="#" class="lable">2021</a>
+                     <a href="#" class="lable">2020</a>
+                     <a href="#" class="lable">2019</a>
+                     <a href="#" class="lable">2018</a>
+                     <a href="#" class="lable">2017</a>
+                     <a href="#" class="lable">2016</a>
+                     <a href="#" class="lable">2015</a>
+                     <a href="#" class="lable">2014</a>
+                     <a href="#" class="lable">更早</a>
+                </div>
+                <div class="lableAres">
+                    <p class="til">风格</p>
+                    <a href="#" class="lable all">全部</a>
+                     <a href="#" class="lable">原创</a>
+                     <a href="#" class="lable">小说改</a>
+                     <a href="#" class="lable">漫改</a>
+                     <a href="#" class="lable">热血</a>
+                     <a href="#" class="lable">搞笑</a>
+                     <a href="#" class="lable">校园</a>
+                     <a href="#" class="lable">战斗</a>
+                     <a href="#" class="lable">日常</a>
+                     <a href="#" class="lable">催泪</a>
+                     <a href="#" class="lable">偶像</a>
+                     <a href="#" class="lable">...</a>
+                </div>               
+            </div>
+            <!-- 搜索处 -->
+            <div id="middle">
+                <div id="searchArea">
+                <!-- <img src="../images/banner1.png" class="banner" alt="查找不到图片"> -->
+                <!--最大的div，是为了做为一个轮播图所需元素的容器-->
+        <div id='main'>
+    <!--轮播图片区   在取名时，因为各有所长(分别取名slide1-5)，有共有特性(banner-slide)，所以，取多个类名-->
+                <div id='banner'>
+                    <!--图1-->
+                    <a href="">
+                    <div class='banner-slide  slide1 slide-active'><img src="../images/banner1.0.png" alt="查找不到图片哦"></div>
+                    </a>
+                    <!--图2-->
+                    <a href="">
+                    <div class='banner-slide  slide2'><img src="../images/banner2.0.png" alt="查找不到图片哦"></div>
+                    </a>
+                    <!--图3-->
+                    <a href="">
+                    <div class='banner-slide  slide3'><img src="../images/banner3.0.png" alt="查找不到图片哦"></div>
+                    </a>
+                    <!--图4-->
+                    <a href="">
+                    <div class='banner-slide  slide4'><img src="../images/banner4.0.png" alt="查找不到图片哦"></div>
+                    </a>
+                    <!--图5-->
+                    <a href="">
+                    <div class='banner-slide  slide5'><img src="../images/banner5.0.png" alt="查找不到图片哦"></div>
+                    </a>
+                </div>
+        <!--
+            移动数字绑定图片
+            必然的是，和图片数量是对等的
+        -->
+                <div class="dots">
+                    <ul id='dots'>
+                        <li class="li1"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>  
+                <!--
+                    上、下一张按钮
+                -->
+                <div id="left-right">
+                    <div class="move" id="prev">&lsaquo;</div>
+                    <div class="move" id="next">&rsaquo;</div>
+                </div>
+        </div>  
+                <div id="searchBar">
+                    <!-- <label for="source">搜索范围</label>
+                        <select class="select">
+                            <option value="zonghe">综合</option>
+                            <option value="zuixing">最新</option>
+                            <option value="zuire">最热</option>
+                           
+                        </select> -->
+                      <input type="text" placeholder="请输入..." name="" class ="nameSearch"
+                      id="search3" value="" />
+                        <button  class="search_button"
+                        type="button">搜索</button>
+                     
+                  </div>
+                 <div class="search_suggest" id="suggest_list3">
+                    <ul>
+                    </ul>
+                 </div>
+                
+            </div>
+            
+            <div class="xian" ></div>
+            <p class="fanju">搜索结果</p>
+            <div id="anim_area">
+               
+              
+            </div>
+
+       </div>
+   
+    </body>
+</html>

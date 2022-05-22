@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一缘一会</title>
+    <script type="text/javascript" src="/static/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+</head>
+<body>
+<div id="container">
+    <!-- 导航条 -->
+    <div id="nav">
+        <ul class="search_ul">
+            <li class="search_li"><a href="index.html" class="active_nav" class="people"><img width="50px" height="30px"
+                                                                                              src="/static/images/logo.png"/></a>
+            </li>
+            <li class="search_li"><a href="index.html">首页</a></li>
+            <li class="search_li"><a href="recommendation.html">推荐</a></li>
+            <li class="search_li"><a href="community.html">社区</a></li>
+
+            <li class="search_li" style="float:right"><a href="login.html">登录</a></li>
+            <li class="search_li" style="float:right"><a href="community.html" class="people"><img width="16px"
+                                                                                                   height="16px"
+                                                                                                   src="/static/icons/people.png"/></a>
+            </li>
+            <li class="search_li" style="float:right"><a href="search.html" class="people"><img width="16px"
+                                                                                                height="16px"
+                                                                                                src="/static/icons/查找.png"/></a>
+            </li>
+            <!--  <li class="search_li" style="float:right">
+                 <div class="search">
+                     <input type="text" placeholder="请输入..." name="" id="" value="" />
+                     <button>搜索</button>
+                 </div>
+             </li> -->
+        </ul>
+    </div>
+
+    <!-- banner -->
+    <div id="banner">
+        <img class="banner" src="/static/images/banner.png"/>
+        <script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
+        <script src="http://www.lmlblog.com/blog/12/js/Snow.js"></script>
+        <style type="text/css">
+            .snow-container{position:absolute;top:0;left:0;width:100%;height:405px;pointer-events:none;z-index:100001;}
+
+
+
+        </style>
+        <div class="snow-container"></div>
+    </div>
+
+    <!-- 日历表 -->
+    <div id="date">
+        <ul class="date_ul">
+            {% for i in week %}
+            {% if item.week == week.3.week %}
+            <a href="javascript:;" class="a_date a_data_active" day="{{ i.week }}">
+                <li>{{ i.time }} <br/>{{ i.hanziweek }}</li>
+            </a>
+            {% else %}
+            <a href="javascript:;" class="a_date" day="{{ i.week }}">
+                <li>{{ i.time }} <br/>{{ i.hanziweek }}</li>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- 时间轴 -->
+    <div id="anim">
+        <div class="timer left">
+            <div class="main hidden">
+                <div class="content">
+                    <div class="item">
+                        {% for item in anim %}
+                        {% if item.week == "7" %}
+                        <a href="detail.html" class="a_child">
+                            <div class="child">
+                                <span class="anim_time">{{ item.time }}</span>
+                                <h4>{{ item.name }}</h4>
+                                <img src="{{ item.img }}"/>
+                                <p>第{{ item.jishu }}话</p>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer right">
+            <div class="main hidden">
+                <div class="content">
+                    <div class="item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+            var week = {{ week|safe }};
+             var anim = {{ anim|safe }};
+             console.log(week);
+            $(function() {// 初始化内容
+                animlist =[];
+
+                for(var j=0;j<7;j++){
+                    alist=[];
+                    for(var i=0;i<anim.length;i++){
+                        if(anim[i]["week"] == j+1){
+                           templist=[];
+                            for(var key in anim[i]){
+                                templist.push(anim[i][key]);
+                            }
+                            alist.push(templist);
+                        }
+                   }
+                   animlist.push(alist);
+               }
+                console.log(animlist);
+                switchDate(week[3]["week"]);
+
+            });
+
+
+            //在页面加载完后立即执行多个函数。
+            $('body').on('click','.a_date',function(){
+                $("#anim").hide();
+                var day = $(this).attr("day");
+                switchDate(day);
+                $("#anim").fadeIn("2000");
+            });
+
+            function switchDate(value){
+                valueInt = parseInt(value);
+                if(valueInt == 0){
+                    valueInt = 7;
+                }
+                console.log(valueInt);
+                // 得到日程表列表
+                var date_ul = document.getElementsByClassName("date_ul")[0];
+                var left_item = document.getElementsByClassName("timer left")[0].getElementsByClassName("item")[0];
+                var right_item = document.getElementsByClassName("timer right")[0].getElementsByClassName("item")[0];
+                // 日期的a数组
+                var dates = date_ul.getElementsByClassName("a_date");
+
+                // 更换active
+                for(var i=0;i<dates.length;i++){
+                    dates[i].setAttribute("class","a_date");
+                }
+                index = valueInt+1-week[0]["week"];
+                if(index<=0){
+                 index+=7;
+                }
+                console.log(index-1);
+                dates[index-1].setAttribute("class","a_date a_data_active");
+
+                // 渲染div
+                // 第一步 清空所有的child a
+                $("a").remove(".a_child");
+                // 第二步 根据value重新渲染child
+                for(var i=0;i<animlist[valueInt-1].length;i++){
+
+                    name = animlist[valueInt-1][i][0];
+                    var num = animlist[valueInt-1][i][4];
+                    var time = animlist[valueInt-1][i][3];
+                    var img = animlist[valueInt-1][i][1];
+     
+                    var div = document.createElement("div");
+                    var html = '<a href="detail.html" class="a_child"><div class="child">'+' <span class="anim_time">'+time+'</span>'+'<h4>'+name+'</h4>'+' <img src="'+img+'"/><p>第'+num+'话</p></div></a>';
+                    div.innerHTML = html;
+
+                    if(time<="12:00"){
+                        left_item.appendChild(div);
+                    }else{
+                        right_item.appendChild(div);
+                    }
+                }
+            }
+
+
+
+    </script>
+</body>
+</html>

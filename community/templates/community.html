@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/community.css"/>
+    
+    <title>社区</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 导航条 -->
+        <div id="nav" >
+            <ul class="search_ul">
+                <li class="search_li"><a href="index.html" class="active_nav" class="people"><img width="50px" height="30px" src="../images/logo.png"/></a></li>
+                <li class="search_li"><a href="index.html" >首页</a></li>
+                <li class="search_li"><a href="recommendation.html">推荐</a></li>
+                <li class="search_li"><a href="community.html">社区</a></li>
+
+                <li class="search_li" style="float:right"><a href="login.html">登录</a></li>
+                <li class="search_li" style="float:right"><a href="community.html" class="people"><img width="16px" height="16px" src="../icons/people.png"/></a></li>
+                <li class="search_li" style="float:right"><a href="search.html" class="people"><img width="16px" height="16px" src="../icons/查找.png"/></a></li>
+               <!--  <li class="search_li" style="float:right">
+                    <div class="search">
+                        <input type="text" placeholder="请输入..." name="" id="" value="" />
+                        <button>搜索</button>
+                    </div>
+                </li> -->
+              </ul>
+        </div>
+
+        <div class="community">
+            <!-- 左边部分 -->
+            <div class="commu_nav">
+                <!-- 左上 -->
+                <div class="up">
+                    <div class="imgbox">
+                        <img src="../touxiang_images/touxiang-3.jpg">
+                    </div>
+                    <p class="name">Dudu</p>
+                    <div class="nameline"></div>
+                    
+                    <a href="javascript:;" class="a_nav_up"><div class="guanzhu">
+                        <p class="a_nav_up_p" style="font-size:22px; margin: 6px 0 2px 0;">关注</p>
+                        <p style="font-size:22px; color: #588C9B; font-weight: bold;">2</p>
+                    </div></a>
+                    <a href="javascript:;" class="a_nav_up" ><div class="fans">
+                        <p class="a_nav_up_p" style="font-size: 22px;margin: 6px 0 2px 0;">粉丝</p>
+                        <p style="font-size: 22px;color: #588C9B; font-weight: bold;">3</p>
+                    </div></a>
+                </div>
+                <!-- 左下 -->
+                <div class="down">
+                    <div class="down-shang">
+                        <p class="nav_head">社区</p>
+                        <div class="nav_content">
+                            <img src="../icons/search_gray.png">
+                            <a href="javascript:;" class="a_nav_down"><p>发现</p></a>
+                            <!-- <p class="nav_text_active">发现</p> -->
+                        </div>
+
+                        <div class="nav_content">
+                            <img src="../icons/addressbook_gray.png">
+                            <a href="javascript:;" class="a_nav_down"><p>关注</p></a>
+                        </div>
+                    </div>
+                    <div class="line1"></div>
+                    <div class="down-xia">
+                        <p class="nav_head">创作者中心</p>
+                        
+                        <div class="nav_line"></div>
+
+                        <div class="nav_content">
+                            <img src="../icons/brush_gray.png">
+                            <a href="javascript:;" class="a_nav_down"><p>文章</p></a>
+                        </div>
+                        <div class="nav_content">
+                            <img src="../icons/ai_gray.png">
+                            <a href="javascript:;" class="a_nav_down"><p>喜欢</p></a>
+                        </div>
+                        <div class="nav_content">
+                            <img src="../icons/message_gray.png">
+                            <a href="javascript:;" class="a_nav_down"><p>消息</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边部分 -->
+            <div class="commu_content">
+                <div id="find">
+                    <!-- 一篇所有内容 -->
+                    <ul class='articlebox'>
+                        <li class="an-article">
+                            <div class="contentbox">
+                                <!-- 删除 -->
+                                <a class="close" href="javascript:;">×</a>
+                                <!-- 头像 -->
+                                <div class="article_head"><img src="../touxiang_images/touxiang-4.jpg" alt=""></div>
+
+                                <div class='article'>
+                                    <!-- 文章内容 -->
+                                    <p class="article_text">
+                                        <span class="article_name">草莓牛奶：<br><br></span>
+                                        <span>秋风萧瑟人寂寥，然而有时候，一道美味的菜肴足以慰藉人心。<br><br>
+                                        真正的美味不一定需要高端的食材、繁琐的烹饪技巧，抛开所有烦恼，大快朵颐，便是最佳治愈。</span>
+                                    </p>
+                                    <!-- 配图 -->
+                                    <div class="article_pic"><img src="../anim_images/小林家的龙女仆.png" alt=""></div>
+                                    <div class="article_bottom">
+                                        <!-- 评论时间 -->
+                                        <span class="article_date">2021年 10月 15日     11:17</span>
+                                        <!-- 点赞 -->
+                                        <a href="javascript:;"  class="zan" total="23" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>23</span></a>
+                                          <!-- 收藏 -->
+                                          <a href="javascript:;" class="article_like" shoucang="0"><img src="../icons/ai_gray.png" alt=""></a>
+                                    </div>
+                                 </div>
+                            </div>
+                           
+                                <!-- 文章的评论 -->
+                                <div class="reply_list">
+                                    <div class="reply" user="self">
+                                        <!-- 头像 -->
+                                        <div class="reply_left">
+                                            <img src="../touxiang_images/touxiang-5.jpg" alt="">
+                                        </div>
+                                        <!-- 内容 -->
+                                        <div class="reply_right">
+                                            <div class="reply_content">
+                                                <span class="user">榴莲千层：</span>
+                                                <span>我觉得很不错</span>
+                                            </div>
+                                            <!-- 回复时间 -->
+                                            <div class="reply_date"><span>2021年 10月 16日     14:20</span>
+                                                <!-- 赞 -->
+                                                <a href="javascript:;"  class="reply_zan" total="10" my="1"><img src="../icons/like_yes.png" alt="">&nbsp;<span>10</span></a>
+                                                <!-- 回复 -->
+                                                <a href="javascript:;"><img class="reply_dele" src="../icons/interactive.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="reply" user="self">
+                                        <!-- 头像 -->
+                                        <div class="reply_left">
+                                            <img src="../touxiang_images/touxiang-1.jpg" alt="">
+                                        </div>
+                                        <!-- 内容 -->
+                                        <div class="reply_right">
+                                            <div class="reply_content">
+                                                <span class="user">巧克力蛋糕：</span>
+                                                <span>龙女仆很好看！</span>
+                                            </div>
+                                            <!-- 回复时间 -->
+                                            <div class="reply_date"><span>2021年 10月 17日     18:13</span>
+                                                <!-- 赞 -->
+                                                <a href="javascript:;"  class="reply_zan" total="14" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>14</span></a>
+                                                <!-- 回复 -->
+                                                <a href="javascript:;"><img  class="reply_dele" src="../icons/interactive.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hf">
+                                        <textarea type="text" class="hf_text" autocomplete="off" maxlength="100">评论…</textarea>
+                                        <button class="hf_btn">回复</button>
+                                        <span class="hf_nub">0/100</span>
+                                    </div>
+                                </div>
+                            
+                        </li>
+
+                        <li class="an-article">
+                            <div class="contentbox">
+                                <!-- 删除 -->
+                                <a class="close" href="javascript:;">×</a>
+                                <!-- 头像 -->
+                                <div class="article_head"><img src="../touxiang_images/touxiang-4.jpg" alt=""></div>
+
+                                <div class='article'>
+                                    <!-- 文章内容 -->
+                                    <p class="article_text">
+                                        <span class="article_name">草莓牛奶：<br><br></span>
+                                        <span>秋风萧瑟人寂寥，然而有时候，一道美味的菜肴足以慰藉人心。<br><br>
+                                        真正的美味不一定需要高端的食材、繁琐的烹饪技巧，抛开所有烦恼，大快朵颐，便是最佳治愈。</span>    
+                                    </p>
+                                    <div class="article_bottom">
+                                        <!-- 评论时间 -->
+                                        <span class="article_date">2021年 10月 15日     11:17</span>
+                                        <!-- 点赞 -->
+                                        <a href="javascript:;"  class="zan" total="23" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>23</span></a>
+                                          <!-- 收藏 -->
+                                          <a href="javascript:;" class="article_like" shoucang="0"><img src="../icons/ai_gray.png" alt=""></a>
+                                    </div>
+                                 </div>
+                            </div>
+                           
+                                <!-- 文章的评论 -->
+                                <div class="reply_list">
+                                    <div class="reply" user="self">
+                                        <!-- 头像 -->
+                                        <div class="reply_left">
+                                            <img src="../touxiang_images/touxiang-3.jpg" alt="">
+                                        </div>
+                                        <!-- 内容 -->
+                                        <div class="reply_right">
+                                            <div class="reply_content">
+                                                <span class="user">Dudu：</span>
+                                                <span>我觉得很不错</span>
+                                            </div>
+                                            <!-- 回复时间 -->
+                                            <div class="reply_date"><span>2021年 10月 16日     14:20</span>
+                                                <!-- 赞 -->
+                                                <a href="javascript:;"  class="reply_zan" my="1"total="10"><img src="../icons/like_yes.png" alt="">&nbsp;<span>23</span></a>
+                                                <!-- 回复 -->
+                                                <a class="reply_dele" href="javascript:;">删除</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="hf">
+                                        <textarea type="text" class="hf_text" autocomplete="off" maxlength="100">评论…</textarea>
+                                        <button class="hf_btn">回复</button>
+                                        <span class="hf_nub">0/100</span>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <div id="subscribe" style="display:none">
+                    <div class="subscribebox">
+                        <div class="subscribe_up">
+                            <p>全部关注</p>
+                            <span>（2）</span>
+                        </div>
+                        <ul class="subscribe_list">
+                            <li class="subscribe_item">
+                                <div class="subscribe_head">
+                                    <a href="community.html"><img src="../touxiang_images/touxiang-1.jpg" alt=""></a>
+                                </div>
+                                <div class="subscribe_content">
+                                    <a class="subscribe_name" href="community.html"><span>草莓牛奶</span><br></a>
+                                    <span class="subscribe_qianming">自由插画师，请多关照</span>
+                                </div>
+                                <button class="subscribe_button" isGuanzhu="1">已关注</button>
+                                <!-- <div></div> -->
+                            </li>
+                            <li class="subscribe_item">
+                                <div class="subscribe_head">
+                                    <a href="community.html"><img src="../touxiang_images/touxiang-2.jpg" alt=""></a>
+                                </div>
+                                <div class="subscribe_content">
+                                    <a class="subscribe_name" href="community.html"><span>白巧克力</span><br></a>
+                                    <span class="subscribe_qianming">佛...</span>
+                                </div>
+                                <button class="subscribe_button" isGuanzhu="1">已关注</button>
+                                <!-- <div></div> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <div id="articles" style="display:none">
+                    <div class="writebox">
+                        <textarea type="text" class="write_text" autocomplete="off" maxlength="1000">分享你的新鲜事~</textarea>
+
+                        <button class="write_btn">发布</button>
+                        <span class="write_nub">0/1000</span>
+                    </div>
+
+                    <!-- 一篇所有内容 -->
+                    <ul class='articlebox'>
+                        <li class="an-article">
+                            <div class="contentbox">
+                                <!-- 删除 -->
+                                <a class="close" href="javascript:;">×</a>
+                                <!-- 头像 -->
+                                <div class="article_head"><img src="../touxiang_images/touxiang-3.jpg" alt=""></div>
+
+                                <div class="article">
+                                    <!-- 文章内容 -->
+                                    <p class="article_text"><span class="article_name">Dudu：<br><br></span>
+                                        <span>今天又有很多更新的动画呀！</span>
+                                    </p>
+                                    <!-- 配图 -->
+                                    <div class="article_pic"><img src="../anim_images/灵笼.png" alt=""></div>
+                                    <div class="article_bottom">
+                                        <!-- 评论时间 -->
+                                        <span class="article_date">2021年 10月 15日     11:17</span>
+                                      
+                                        <!-- 点赞 -->
+                                        <a href="javascript:;"  class="zan" total="23" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>23</span></a>
+                                        <!-- 收藏 -->
+                                        <a href="javascript:;" class="article_like" shoucang="0"><img src="../icons/ai_gray.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- 文章的评论 -->
+                            <div class="reply_list">
+
+                                <div class="reply" user="self">
+                                     <!-- 头像 -->
+                                    <div class="reply_left">
+                                         <img src="../touxiang_images/touxiang-5.jpg" alt="">
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="reply_right">
+
+                                        <div class="reply_content">
+                                            <span class="user">阿尔卑斯：</span>
+                                            <span>你听说了吗？</span>
+                                        </div>
+
+                                        <!-- 回复时间 -->
+                                        <div class="reply_date"><span>2021年 10月 17日     18:13</span>
+
+                                            <!-- 赞 -->
+                                            <a href="javascript:;"  class="reply_zan" total="14" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>14</span></a>
+
+                                            <!-- 回复 -->
+                                             <a href="javascript:;"><img  class="reply_dele" src="../icons/interactive.png" alt=""></a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="hf">
+
+                                    <textarea type="text" class="hf_text" autocomplete="off" maxlength="100">评论…</textarea>
+
+                                    <button class="hf_btn">回复</button>
+
+                                    <span class="hf_nub">0/100</span>
+                                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="like" style="display:none">
+                 <!-- 一篇所有内容 -->
+                 <ul class='articlebox'>
+                    <li class="an-article">
+                        <div class="contentbox">
+                            <!-- 删除 -->
+                            <a class="close" href="javascript:;">×</a>
+                            <!-- 头像 -->
+                            <div class="article_head"><img src="../touxiang_images/touxiang-2.jpg" alt=""></div>
+
+                            <div class='article'>
+                                <!-- 文章内容 -->
+                                <p class="article_text"><span class="article_name">Dudu：<br><br></span><span>完结撒花，感谢陪伴</span>
+                                </p>
+                                <!-- 配图 -->
+                                <div class="article_pic"><img src="../images/biaoqingbao-1.jpg" alt=""></div>
+                                <div class="article_bottom">
+                                    <!-- 评论时间 -->
+                                    <span class="article_date">2021年 10月 15日     11:17</span>
+                                    <!-- 点赞 -->
+                                    <a href="javascript:;"  class="zan" total="23" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>23</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                            <!-- 文章的评论 -->
+                            <div class="reply_list">
+
+                                <div class="reply" user="self">
+                                    <!-- 头像 -->
+                                    <div class="reply_left">
+                                        <img src="../touxiang_images/touxiang-1.jpg" alt="">
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="reply_right">
+                                        <div class="reply_content">
+                                            <span class="user">榴莲牛奶：</span><span>    好耶</span>
+                                        </div>
+                                        <!-- 回复时间 -->
+                                        <div class="reply_date"><span>2021年 10月 17日     18:13</span>
+                                            <!-- 赞 -->
+                                            <a href="javascript:;"  class="reply_zan" total="14" my="0"><img src="../icons/like.png" alt="">&nbsp;<span>14</span></a>
+                                            <!-- 回复 -->
+                                            <a href="javascript:;"><img  class="reply_dele" src="../icons/interactive.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hf">
+                                    <textarea type="text" class="hf_text" autocomplete="off" maxlength="100">评论…</textarea>
+                                    <button class="hf_btn">回复</button>
+                                    <span class="hf_nub">0/100</span>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+
+                
+                <div id="message" style="display:none">
+                    <div class="messbox">
+                        <div class="mess_up">
+                            <p>消息列表</p>
+                        </div>
+                        <ul class="mess_list">
+                            <li class="a_mess">
+                                <p class="mess_content">
+                                    <span class="mess_person">创作中心</span>
+                                    <span class="mess_date">2021年12月18日 12:40</span>
+                                    <br>
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;发表文章可获得神秘大礼哦~
+                                </p>
+                            </li>
+                            <li class="a_mess">
+                                <p class="mess_content">
+                                    <span class="mess_person">创作中心</span>
+                                    <span class="mess_date">2021年12月14日 12:40</span>
+                                    <br>
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="mess_bold">榴莲牛奶，巧克力千层</span>
+                                    &nbsp;&nbsp;等总计10人赞了你~
+                                </p>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
+                <div id="fans" style="display:none">
+                    <div class="subscribebox">
+                        <div class="subscribe_up">
+                            <p>全部粉丝</p>
+                            <span>（3）</span>
+                        </div>
+                        <ul class="subscribe_list">
+                            <li class="subscribe_item">
+                                <div class="subscribe_head">
+                                    <a href="community.html"><img src="../touxiang_images/touxiang-4.jpg" alt=""></a>
+                                </div>
+                                <div class="subscribe_content">
+                                    <a class="subscribe_name" href="community.html"><span>榴莲千层</span><br></a>
+                                    <span class="subscribe_qianming">有事私信</span>
+                                </div>
+                                <button class="fans_button">已回关</button>
+                                <!-- <div></div> -->
+                            </li>
+                            <li class="subscribe_item">
+                                <div class="subscribe_head">
+                                    <a href="community.html"><img src="../touxiang_images/touxiang-5.jpg" alt=""></a>
+                                </div>
+                                <div class="subscribe_content">
+                                    <a class="subscribe_name" href="community.html"><span>红豆泥</span><br></a>
+                                    <span class="subscribe_qianming">嘿...</span>
+                                </div>
+                                <button class="fans_button">已回关</button>
+                                <!-- <div></div> -->
+                            </li>
+                            <li class="subscribe_item">
+                                <div class="subscribe_head">
+                                    <a href="community.html"><img src="../touxiang_images/touxiang-2.jpg" alt=""></a>
+                                </div>
+                                <div class="subscribe_content">
+                                    <a class="subscribe_name" href="community.html"><span>蛋黄酥</span><br></a>
+                                    <span class="subscribe_qianming">芜湖...</span>
+                                </div>
+                                <button class="fans_button">已回关</button>
+                                <!-- <div></div> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/community-switch.js"></script>
+</body>
+</html>
